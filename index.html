@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body>div{
+    width: 500px;
+    height: 300px;
+    margin: 100px auto;
+    border: 3px solid gray;
+    position: relative;
+
+}
+body>div>div{
+    background-color: blueviolet;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 1%;
+    top: 0;
+}
+
+
+
+    </style>
+</head>
+<body onkeyup="_kld(event)">
+    <div id="mar"   >
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+<script>
+    let _mar = document.querySelectorAll("#mar>div")
+   let _divasli = document.getElementById("mar").style.bottom
+let _clear_right
+let _clear_bottom
+let _clear_top
+let _clear_left
+
+
+// start function haye harekat mar
+
+   let i = 0
+
+   let _px = 0
+   let _pxtb = 0
+function _right(){
+   _clear_right = setInterval(() => {
+  
+        if(i<_mar.length ){
+        _mar[i].style.left = _px + "px"
+        _mar[i].style.top = _pxtb + "px"
+        _px = (_px + 10)
+        i++
+        }
+        else if(_px >= 492){
+            clearInterval(_clear_right)
+            alert("game over")
+        }
+        else{
+i=0
+        }
+    }, 50);
+}
+
+
+function _left(){
+     _clear_left = setInterval(() => {
+        if(i<_mar.length ){
+        _mar[i].style.left = _px + "px"
+        _mar[i].style.top = _pxtb + "px"
+        _px = (_px - 10)
+        i++
+        }
+        else if(_px < 0){
+            clearInterval(_clear_left)
+            
+            alert("game over")
+        }
+        else{
+i=0
+        }
+    }, 50);
+}
+
+function _bottom(){ 
+    _clear_bottom = setInterval(() => {
+        if(i<_mar.length ){
+        _mar[i].style.top = _pxtb + "px"
+        _mar[i].style.left = _px + "px"
+        _pxtb = (_pxtb + 10)
+        i++
+        }
+        else if(_pxtb >= 295){
+            clearInterval(_clear_bottom)
+            
+            alert("game over")
+        }
+        else{
+i=0
+        }
+    }, 50);
+}
+
+
+function _top(){ 
+     _clear_top = setInterval(() => {
+        if(i<_mar.length ){
+        _mar[i].style.top = _pxtb + "px"
+        _mar[i].style.left = _px + "px"
+        _pxtb = (_pxtb - 10)
+        i++
+        }
+        else if(_pxtb < 0){
+            clearInterval(_clear_top)
+            
+            alert("game over")
+        }
+        else{
+i=0
+        }
+    }, 50);
+}
+
+//  end function haye harekat mar
+
+
+function _kld(ev){
+
+    if(ev.keyCode == 37){
+        
+        clearInterval(_clear_right)
+        clearInterval(_clear_bottom)
+        clearInterval(_clear_top)
+            _left()
+        }
+        else if(ev.keyCode == 38){
+            clearInterval(_clear_left)
+        clearInterval(_clear_bottom)
+        clearInterval(_clear_right)
+            _top()
+        }
+        else if(ev.keyCode == 39){     i=0
+            clearInterval(_clear_left)
+        clearInterval(_clear_bottom)
+        clearInterval(_clear_top)
+            _right()
+        }
+        else if(ev.keyCode == 40){     i=0
+            clearInterval(_clear_left)
+        clearInterval(_clear_top)
+        clearInterval(_clear_right)
+            _bottom()
+        }
+
+
+
+
+
+
+}
+
+
+
+
+</script>
+
+
+
+
+
+
+</body>
+</html>
