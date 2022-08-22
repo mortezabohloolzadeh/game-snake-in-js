@@ -1,0 +1,70 @@
+body{
+    width: 100%;
+height: 100vh;
+    background-color: rgba(255, 255, 255, 0.386);
+    overflow: hidden;
+    background-image: url(img/11-00\ nokiaa.png);
+    background-repeat: no-repeat;
+background-size: cover ;
+background-position-x: 50%;
+
+}
+body>div{
+width: 15.5%;
+height: 23%;
+margin: 22% 41.6%;
+background-color: rgba(69, 73, 69, 0.85);
+position: relative;
+border-radius: 10%;
+border: 2px solid rgba(130, 113, 113, 0.438);
+box-shadow: -3px 3px 64px 30px rgb(252 242 242);
+
+
+
+}
+
+
+body>div>div{
+background-color: black;
+border-radius: 50%;
+width: 8px;
+height: 8px;
+position: absolute;
+left: 0;
+top: 0;
+}
+
+body>div>section{
+background-color: black;
+border-radius: 50%;
+width: 8px;
+height: 8px;
+position: absolute;
+left: 0;
+top: 0;
+
+}
+body>div>span{
+background-color: black;
+border-radius: 50%;
+width: 8px;
+height: 8px;
+position: absolute;
+display: block;
+left: 0;
+top: 0;
+
+animation: _loghmeh .4s infinite linear ;
+}
+@keyframes _loghmeh {
+
+to{
+opacity: .4;
+
+}
+
+}
+
+
+
+
